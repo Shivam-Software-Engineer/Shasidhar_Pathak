@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shashidhar Pathak — Lead QA/QC Engineer | Civil & Precast</title>
+  <meta name="description" content="Portfolio of Shashidhar Pathak — 11+ years of Civil QA/QC experience across Commercial, Residential, Industrial & Precast projects. Currently Lead QA/QC at Larsen & Toubro." />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            base: '#0a0f1c',
+            surface: '#0f1626',
+            elevated: '#141d33',
+            line: '#1e2a46',
+            ink: '#e7ecf5',
+            muted: '#8a95ad',
+            brand: '#d4b26a',
+            brandDeep: '#b28a3d',
+            accent: '#f4c777'
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            body: ['"Manrope"', 'system-ui', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,500&family=Manrope:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- EmailJS SDK (optional — configure keys in js/main.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-base text-ink font-body antialiased selection:bg-brand/30 selection:text-white overflow-x-hidden">
+
+  <!-- ambient background layers -->
+  <div class="fixed inset-0 -z-10 pointer-events-none">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(212,178,106,0.10),transparent_55%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(30,58,138,0.18),transparent_55%)]"></div>
+    <div class="absolute inset-0 grain-overlay opacity-[0.08]"></div>
+    <div class="absolute inset-0 grid-overlay"></div>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 py-4 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3 group">
+        <span class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-brand/40 bg-surface/70 backdrop-blur text-brand font-display font-bold">SP</span>
+        <div class="leading-tight hidden sm:block">
+          <div class="font-display text-lg text-ink">Shashidhar Pathak</div>
+          <div class="text-[11px] tracking-[0.25em] uppercase text-muted">Lead QA/QC · Civil</div>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 text-sm text-ink/80">
+        <a href="#about"       class="nav-link">About</a>
+        <a href="#experience"  class="nav-link">Experience</a>
+        <a href="#projects"    class="nav-link">Projects</a>
+        <a href="#skills"      class="nav-link">Skills</a>
+        <a href="#education"   class="nav-link">Education</a>
+        <a href="#contact"     class="nav-link">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="assets/resume.pdf" download
+           data-testid="nav-resume-btn"
+           class="hidden sm:inline-flex items-center gap-2 rounded-full border border-brand/50 bg-brand/10 hover:bg-brand hover:text-base px-4 py-2 text-sm text-brand transition-all duration-300">
+          <i class="fa-solid fa-file-arrow-down"></i> Resume
+        </a>
+        <button id="menuBtn" class="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-line text-ink" data-testid="menu-toggle-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="lg:hidden hidden border-t border-line bg-surface/95 backdrop-blur">
+      <nav class="px-6 py-6 flex flex-col gap-4 text-ink">
+        <a href="#about"      class="mobile-link">About</a>
+        <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#projects"   class="mobile-link">Projects</a>
+        <a href="#skills"     class="mobile-link">Skills</a>
+        <a href="#education"  class="mobile-link">Education</a>
+        <a href="#contact"    class="mobile-link">Contact</a>
+        <a href="assets/resume.pdf" download class="mobile-link text-brand"><i class="fa-solid fa-file-arrow-down mr-2"></i>Download Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="home" class="relative min-h-screen flex items-center pt-32 pb-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 w-full grid lg:grid-cols-12 gap-14 items-center">
+
+      <div class="lg:col-span-7" data-aos="fade-right" data-aos-duration="900">
+        <div class="inline-flex items-center gap-3 rounded-full border border-line bg-surface/60 backdrop-blur px-4 py-1.5 text-xs uppercase tracking-[0.3em] text-muted mb-8">
+          <span class="h-1.5 w-1.5 rounded-full bg-brand animate-pulse"></span>
+          Available for Consultation
+        </div>
+
+        <h1 class="font-display font-bold leading-[0.98] text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">
+          Building <span class="italic text-brand">quality</span>
+          <br>into every structure.
+        </h1>
+
+        <p class="mt-8 max-w-2xl text-lg text-ink/70 leading-relaxed">
+          I'm <span class="text-ink font-semibold">Shashidhar Pathak</span>, a Lead QA/QC Engineer with
+          <span class="text-brand font-semibold">11+ years</span> across Commercial, Residential, Industrial &amp; Precast projects — currently heading Quality at
+          <span class="text-ink font-semibold">Larsen &amp; Toubro</span>.
+        </p>
+
+        <div class="mt-10 flex flex-wrap items-center gap-4">
+          <a href="#contact" data-testid="hero-contact-btn"
+             class="group inline-flex items-center gap-3 rounded-full bg-brand text-base px-7 py-3.5 font-semibold hover:bg-accent transition-all duration-300 shadow-lg shadow-brand/20">
+            Get in touch
+            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+          </a>
+          <a href="assets/resume.pdf" download data-testid="hero-resume-btn"
+             class="inline-flex items-center gap-3 rounded-full border border-line bg-surface/60 hover:border-brand/60 hover:text-brand px-7 py-3.5 text-ink transition-all duration-300">
+            <i class="fa-solid fa-file-arrow-down"></i> Download CV
+          </a>
+          <a href="#projects"
+             class="inline-flex items-center gap-2 text-ink/70 hover:text-brand transition text-sm underline underline-offset-4 decoration-line hover:decoration-brand">
+            View Projects <i class="fa-solid fa-arrow-down"></i>
+          </a>
+        </div>
+
+        <!-- KPI strip -->
+        <div class="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl">
+          <div class="kpi" data-aos="fade-up" data-aos-delay="100">
+            <div class="kpi-num" data-count="11">0</div>
+            <div class="kpi-label">Years Experience</div>
+          </div>
+          <div class="kpi" data-aos="fade-up" data-aos-delay="200">
+            <div class="kpi-num" data-count="30">0</div>
+            <div class="kpi-label">Projects Audited</div>
+          </div>
+          <div class="kpi" data-aos="fade-up" data-aos-delay="300">
+            <div class="kpi-num" data-count="4">0</div>
+            <div class="kpi-label">Companies</div>
+          </div>
+          <div class="kpi" data-aos="fade-up" data-aos-delay="400">
+            <div class="kpi-num flex items-baseline gap-1"><span data-count="100">0</span><span>%</span></div>
+            <div class="kpi-label">Compliance Rate</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portrait card -->
+      <div class="lg:col-span-5 relative" data-aos="fade-left" data-aos-duration="1000">
+        <div class="relative mx-auto max-w-md">
+          <div class="absolute -inset-6 rounded-[2rem] bg-gradient-to-tr from-brand/20 via-transparent to-blue-500/10 blur-2xl"></div>
+          <div class="relative rounded-[2rem] border border-line bg-surface/60 backdrop-blur p-6">
+            <div class="aspect-[4/5] rounded-2xl overflow-hidden ring-1 ring-line relative">
+              <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=80"
+                   alt="Construction quality engineer at site"
+                   class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-base/90 via-base/20 to-transparent"></div>
+              <div class="absolute bottom-5 left-5 right-5">
+                <div class="text-xs uppercase tracking-[0.25em] text-brand">Current Role</div>
+                <div class="font-display text-2xl mt-1">Lead QA/QC — L&amp;T</div>
+                <div class="text-sm text-ink/70 mt-1">SDTT Cancer Hospital · Prayagraj, U.P.</div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-3 mt-6 text-center">
+              <div class="rounded-xl border border-line bg-elevated/60 p-3">
+                <div class="text-xs text-muted">Cert.</div>
+                <div class="text-sm font-semibold text-brand">ISO 9001</div>
+              </div>
+              <div class="rounded-xl border border-line bg-elevated/60 p-3">
+                <div class="text-xs text-muted">Auditor</div>
+                <div class="text-sm font-semibold text-brand">QMS</div>
+              </div>
+              <div class="rounded-xl border border-line bg-elevated/60 p-3">
+                <div class="text-xs text-muted">AI</div>
+                <div class="text-sm font-semibold text-brand">L&amp;T Adopter</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- floating badge -->
+          <div class="absolute -left-6 top-16 rotate-[-6deg] hidden sm:block">
+            <div class="rounded-2xl border border-brand/40 bg-surface/90 backdrop-blur px-4 py-3 shadow-lg shadow-black/40">
+              <div class="text-[10px] uppercase tracking-widest text-muted">Currently at</div>
+              <div class="font-display text-brand text-lg">Larsen &amp; Toubro</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- scroll cue -->
+    <a href="#about" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted hover:text-brand transition">
+      <i class="fa-solid fa-angles-down animate-bounce"></i>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="relative py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-12 gap-14">
+      <div class="lg:col-span-4" data-aos="fade-up">
+        <div class="section-eyebrow">01 — About</div>
+        <h2 class="section-title">A decade of <span class="italic text-brand">on-site</span> quality leadership.</h2>
+      </div>
+      <div class="lg:col-span-8 space-y-6 text-ink/75 text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="150">
+        <p>
+          For over eleven years, I've made a career out of the small details that make big structures safe — checking every material, every mix, every millimetre.
+          From high-rise precast towers in Mumbai to a landmark international cricket stadium in Varanasi and now a 160-bed cancer hospital in Prayagraj, my work sits quietly behind the concrete.
+        </p>
+        <p>
+          As a <span class="text-brand font-semibold">QMS 9001:2015 Auditor</span> and Lead QA/QC engineer with Larsen &amp; Toubro, I lead site-quality teams, sign off on RMC designs, calibrate against IS codes, and hold the line where speed meets specification.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-4 pt-4">
+          <div class="fact-card">
+            <i class="fa-solid fa-location-dot text-brand"></i>
+            <div><div class="text-sm text-muted">Based in</div><div>Prayagraj, Uttar Pradesh</div></div>
+          </div>
+          <div class="fact-card">
+            <i class="fa-solid fa-briefcase text-brand"></i>
+            <div><div class="text-sm text-muted">Current</div><div>Lead QA/QC · L&amp;T</div></div>
+          </div>
+          <div class="fact-card">
+            <i class="fa-solid fa-industry text-brand"></i>
+            <div><div class="text-sm text-muted">Domains</div><div>Commercial · Residential · Industrial · Precast</div></div>
+          </div>
+          <div class="fact-card">
+            <i class="fa-solid fa-medal text-brand"></i>
+            <div><div class="text-sm text-muted">Certifications</div><div>ISO 9001:2015 · AI Adopter (L&amp;T)</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience" class="relative py-28 bg-surface/40 border-y border-line">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="max-w-3xl mb-16" data-aos="fade-up">
+        <div class="section-eyebrow">02 — Experience</div>
+        <h2 class="section-title">A career built <span class="italic text-brand">site by site</span>.</h2>
+      </div>
+
+      <ol class="relative border-l border-line ml-3 space-y-14">
+        <!-- L&T -->
+        <li class="pl-8 relative" data-aos="fade-up">
+          <span class="tl-dot"></span>
+          <div class="tl-card">
+            <div class="flex flex-wrap items-baseline justify-between gap-3">
+              <h3 class="font-display text-2xl">Lead QA/QC — Project</h3>
+              <span class="badge">Jun 2026 — Present</span>
+            </div>
+            <div class="mt-1 text-brand font-semibold">Larsen &amp; Toubro · Prayagraj, U.P.</div>
+            <p class="mt-4 text-ink/75">
+              Site Head of Quality Department overseeing comprehensive quality assurance and control for a
+              <strong>160-bed cancer hospital project</strong> at KNMH Prayagraj (SDTT). Leading multi-disciplinary QA/QC teams across civil, MEP and finishing works.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">Site Quality Leadership</span>
+              <span class="chip">Hospital Construction</span>
+              <span class="chip">MEP Coordination</span>
+              <span class="chip">ISO 9001:2015</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- L&T Sr -->
+        <li class="pl-8 relative" data-aos="fade-up">
+          <span class="tl-dot"></span>
+          <div class="tl-card">
+            <div class="flex flex-wrap items-baseline justify-between gap-3">
+              <h3 class="font-display text-2xl">Senior QA/QC Engineer</h3>
+              <span class="badge">Sep 2023 — Jun 2026</span>
+            </div>
+            <div class="mt-1 text-brand font-semibold">Larsen &amp; Toubro · International Cricket Stadium, Varanasi</div>
+            <p class="mt-4 text-ink/75">
+              Delivered QA/QC across Civil, Precast, Finishing and MEP works — including
+              <strong>cricket pitch &amp; ground construction</strong> compliant with Indian &amp; international standards.
+              Coordinated stringent testing schedules and audit closures across a landmark BCCI-standard venue.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">Stadium Construction</span>
+              <span class="chip">Precast</span>
+              <span class="chip">Sports Turf Standards</span>
+              <span class="chip">Multi-disciplinary QA</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- BG Shirke -->
+        <li class="pl-8 relative" data-aos="fade-up">
+          <span class="tl-dot"></span>
+          <div class="tl-card">
+            <div class="flex flex-wrap items-baseline justify-between gap-3">
+              <h3 class="font-display text-2xl">QA/QC Engineer</h3>
+              <span class="badge">Feb 2021 — Aug 2023</span>
+            </div>
+            <div class="mt-1 text-brand font-semibold">B.G. Shirke Construction Technology · Mumbai</div>
+            <p class="mt-4 text-ink/75">
+              Precast mass-housing programme using <strong>3S technology</strong> for high-rise construction
+              (S+3P+35F, 120 m). Managed the precast casting yard &amp; site, precast concrete mix design, calibration and quality reporting.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">Precast 3S</span>
+              <span class="chip">High-Rise (120 m)</span>
+              <span class="chip">Casting Yard</span>
+              <span class="chip">Mix Design</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- Epicons -->
+        <li class="pl-8 relative" data-aos="fade-up">
+          <span class="tl-dot"></span>
+          <div class="tl-card">
+            <div class="flex flex-wrap items-baseline justify-between gap-3">
+              <h3 class="font-display text-2xl">QA/QC Engineer</h3>
+              <span class="badge">Feb 2017 — Jan 2021</span>
+            </div>
+            <div class="mt-1 text-brand font-semibold">Epicons Consultants Pvt. Ltd. · Mumbai</div>
+            <p class="mt-4 text-ink/75">
+              Complete on-site quality control — building material checks, high-grade RMC designs, IS-code calibration, shuttering &amp; reinforcement inspection, pre- &amp; post-concreting checks, and quality-review meetings.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">RMC Design</span>
+              <span class="chip">IS Code Calibration</span>
+              <span class="chip">Shuttering QC</span>
+              <span class="chip">Material Testing</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- India Crete -->
+        <li class="pl-8 relative" data-aos="fade-up">
+          <span class="tl-dot"></span>
+          <div class="tl-card">
+            <div class="flex flex-wrap items-baseline justify-between gap-3">
+              <h3 class="font-display text-2xl">Engineer</h3>
+              <span class="badge">Sep 2015 — Jan 2017</span>
+            </div>
+            <div class="mt-1 text-brand font-semibold">India Crete RMC (c/o SPCPL) · Mumbai</div>
+            <p class="mt-4 text-ink/75">
+              Ready-Mix Concrete plant operations &amp; laboratory-grade materials testing. Foundation years — turning IS codes into daily habits.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">RMC Plant</span>
+              <span class="chip">Materials Testing</span>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="relative py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="flex flex-wrap items-end justify-between gap-6 mb-16" data-aos="fade-up">
+        <div class="max-w-2xl">
+          <div class="section-eyebrow">03 — Selected Projects</div>
+          <h2 class="section-title">Landmarks I've <span class="italic text-brand">quality-led</span>.</h2>
+        </div>
+        <p class="text-ink/60 max-w-md">From cricket stadiums to hospitals and mass-housing high-rises — every project has been an exercise in precision at scale.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <article class="project-card" data-aos="fade-up">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?auto=format&fit=crop&w=1000&q=80" alt="Cancer hospital project"/>
+          </div>
+          <div class="p-6">
+            <div class="text-xs uppercase tracking-[0.25em] text-brand">Healthcare · L&amp;T</div>
+            <h3 class="font-display text-2xl mt-2">SDTT Cancer Hospital</h3>
+            <p class="text-ink/70 mt-3">160-bed hospital, Prayagraj. Site Head of Quality Department leading civil, MEP &amp; finishing QA/QC.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">Ongoing</span><span class="chip">160 Beds</span><span class="chip">MEP</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1000&q=80" alt="Cricket stadium"/>
+          </div>
+          <div class="p-6">
+            <div class="text-xs uppercase tracking-[0.25em] text-brand">Sports · L&amp;T</div>
+            <h3 class="font-display text-2xl mt-2">International Cricket Stadium</h3>
+            <p class="text-ink/70 mt-3">Varanasi, U.P. — BCCI-standard venue. Delivered civil, precast &amp; MEP QA plus cricket pitch/ground construction quality.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">Stadium</span><span class="chip">Precast</span><span class="chip">Turf Standards</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80" alt="Precast high-rise"/>
+          </div>
+          <div class="p-6">
+            <div class="text-xs uppercase tracking-[0.25em] text-brand">Residential · BG Shirke</div>
+            <h3 class="font-display text-2xl mt-2">Precast Mass Housing</h3>
+            <p class="text-ink/70 mt-3">S+3P+35F high-rise (120 m) using 3S technology. Casting yard operations, mix design &amp; installation QA.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">3S Precast</span><span class="chip">120 m</span><span class="chip">Mass Housing</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-aos="fade-up">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80" alt="Commercial building"/>
+          </div>
+          <div class="p-6">
+            <div class="text-xs uppercase tracking-[0.25em] text-brand">Commercial · Epicons</div>
+            <h3 class="font-display text-2xl mt-2">High-Rise Commercial Towers</h3>
+            <p class="text-ink/70 mt-3">Multi-tower commercial developments in Mumbai — RMC design, IS-code calibration, shuttering &amp; reinforcement QA.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">RMC</span><span class="chip">IS Code</span><span class="chip">Mumbai</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80" alt="Industrial project"/>
+          </div>
+          <div class="p-6">
+            <div class="text-xs uppercase tracking-[0.25em] text-brand">Industrial · Epicons</div>
+            <h3 class="font-display text-2xl mt-2">Industrial Facilities</h3>
+            <p class="text-ink/70 mt-3">Warehousing &amp; manufacturing units — heavy-load concrete design, foundations, and post-concreting audits.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">Industrial</span><span class="chip">Foundation QA</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80" alt="RMC plant"/>
+          </div>
+          <div class="p-6">
+            <div class="text-xs uppercase tracking-[0.25em] text-brand">RMC · India Crete</div>
+            <h3 class="font-display text-2xl mt-2">Ready-Mix Concrete Plant Ops</h3>
+            <p class="text-ink/70 mt-3">Plant-side quality — daily mix approvals, cube testing, and material qualification for large builder clients.</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">Plant QA</span><span class="chip">Cube Testing</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="relative py-28 bg-surface/40 border-y border-line">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="max-w-3xl mb-16" data-aos="fade-up">
+        <div class="section-eyebrow">04 — Skills</div>
+        <h2 class="section-title">The <span class="italic text-brand">toolkit</span> behind the concrete.</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+
+        <!-- Core -->
+        <div class="skill-block" data-aos="fade-up">
+          <div class="flex items-center gap-3 mb-6">
+            <i class="fa-solid fa-hard-hat text-brand text-2xl"></i>
+            <h3 class="font-display text-2xl">Core Quality</h3>
+          </div>
+          <div class="space-y-4">
+            <div class="skill"><div class="flex justify-between text-sm"><span>QA/QC Engineering</span><span class="text-brand">96%</span></div><div class="bar"><span style="width:96%"></span></div></div>
+            <div class="skill"><div class="flex justify-between text-sm"><span>ISO 9001:2015 Audits</span><span class="text-brand">92%</span></div><div class="bar"><span style="width:92%"></span></div></div>
+            <div class="skill"><div class="flex justify-between text-sm"><span>Precast Technology</span><span class="text-brand">94%</span></div><div class="bar"><span style="width:94%"></span></div></div>
+            <div class="skill"><div class="flex justify-between text-sm"><span>Ready-Mix Concrete</span><span class="text-brand">95%</span></div><div class="bar"><span style="width:95%"></span></div></div>
+          </div>
+        </div>
+
+        <!-- Materials -->
+        <div class="skill-block" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center gap-3 mb-6">
+            <i class="fa-solid fa-flask-vial text-brand text-2xl"></i>
+            <h3 class="font-display text-2xl">Materials &amp; Testing</h3>
+          </div>
+          <div class="space-y-4">
+            <div class="skill"><div class="flex justify-between text-sm"><span>Materials Testing</span><span class="text-brand">93%</span></div><div class="bar"><span style="width:93%"></span></div></div>
+            <div class="skill"><div class="flex justify-between text-sm"><span>Concrete Mix Design</span><span class="text-brand">90%</span></div><div class="bar"><span style="width:90%"></span></div></div>
+            <div class="skill"><div class="flex justify-between text-sm"><span>Shuttering &amp; Rebar QC</span><span class="text-brand">92%</span></div><div class="bar"><span style="width:92%"></span></div></div>
+            <div class="skill"><div class="flex justify-between text-sm"><span>Calibration (IS Codes)</span><span class="text-brand">88%</span></div><div class="bar"><span style="width:88%"></span></div></div>
+          </div>
+        </div>
+
+        <!-- Domain -->
+        <div class="skill-block" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center gap-3 mb-6">
+            <i class="fa-solid fa-building text-brand text-2xl"></i>
+            <h3 class="font-display text-2xl">Domain &amp; Tools</h3>
+          </div>
+          <div class="space-y-4">
+            <div class="skill"><div class="flex justify-between text-sm"><span>Commercial / Residential Buildings</span><span class="text-brand">94%</span></div><div class="bar"><span style="width:94%"></span></div></div>
+            <div class="skill"><div class="flex justify-between text-sm"><span>Industrial Projects</span><span class="text-brand">85%</span></div><div class="bar"><span style="width:85%"></span></div></div>
+            <div class="skill"><div class="flex justify-between text-sm"><span>Microsoft Project</span><span class="text-brand">80%</span></div><div class="bar"><span style="width:80%"></span></div></div>
+            <div class="skill"><div class="flex justify-between text-sm"><span>AI Tools (L&amp;T Samagra)</span><span class="text-brand">78%</span></div><div class="bar"><span style="width:78%"></span></div></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- soft skills chips -->
+      <div class="mt-16 flex flex-wrap gap-3" data-aos="fade-up">
+        <span class="chip-lg">Site Leadership</span>
+        <span class="chip-lg">Quality Audits</span>
+        <span class="chip-lg">MEP Coordination</span>
+        <span class="chip-lg">Client Reporting</span>
+        <span class="chip-lg">Root Cause Analysis</span>
+        <span class="chip-lg">Team Mentoring</span>
+        <span class="chip-lg">Documentation</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION & CERTS ============ -->
+  <section id="education" class="relative py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-12 gap-12">
+      <div class="lg:col-span-4" data-aos="fade-up">
+        <div class="section-eyebrow">05 — Education</div>
+        <h2 class="section-title">Rooted in <span class="italic text-brand">first-class</span> engineering.</h2>
+      </div>
+
+      <div class="lg:col-span-8 space-y-6">
+        <div class="edu-card" data-aos="fade-up">
+          <div class="edu-icon"><i class="fa-solid fa-university"></i></div>
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h3 class="font-display text-xl">Bachelor of Technology — Civil Engineering</h3>
+              <span class="badge">Jul 2024 — Jun 2027</span>
+            </div>
+            <div class="text-brand font-semibold mt-1">Dr. A.P.J. Abdul Kalam Technical University (AKTU), Lucknow</div>
+          </div>
+        </div>
+
+        <div class="edu-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h3 class="font-display text-xl">Diploma in Civil Engineering</h3>
+              <span class="badge">Aug 2012 — May 2015</span>
+            </div>
+            <div class="text-brand font-semibold mt-1">Hansh Wahini Institute of Science &amp; Technology · BTE-UP</div>
+            <div class="text-ink/70 text-sm mt-1">Grade: First Class · Full-time Diploma</div>
+          </div>
+        </div>
+
+        <div class="edu-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="edu-icon"><i class="fa-solid fa-certificate"></i></div>
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h3 class="font-display text-xl">Certifications</h3>
+              <span class="badge">Ongoing</span>
+            </div>
+            <ul class="text-ink/75 mt-3 space-y-2 list-disc list-inside">
+              <li>QMS 9001:2015 Auditor</li>
+              <li>Larsen &amp; Toubro Samagra AI — <span class="text-brand">AI Adopter</span> (Jun 2026)</li>
+              <li>L&amp;T EduTech Professional Development Programs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="relative py-28 bg-surface/40 border-t border-line">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-12 gap-12">
+
+      <div class="lg:col-span-5" data-aos="fade-right">
+        <div class="section-eyebrow">06 — Contact</div>
+        <h2 class="section-title">Let's build something <span class="italic text-brand">right</span>.</h2>
+        <p class="text-ink/70 mt-6 leading-relaxed">
+          Available for site quality leadership roles, QMS audits, precast &amp; RMC consulting, and technical review engagements. Drop a note — I usually reply within a day.
+        </p>
+
+        <div class="mt-10 space-y-5">
+          <a href="mailto:shashidhar.pathak@example.com" class="contact-item" data-testid="contact-email">
+            <span class="contact-ico"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <div class="text-xs uppercase tracking-widest text-muted">Email</div>
+              <div class="text-ink group-hover:text-brand transition">shashidhar.pathak@example.com</div>
+            </div>
+          </a>
+          <a href="tel:+919999999999" class="contact-item" data-testid="contact-phone">
+            <span class="contact-ico"><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <div class="text-xs uppercase tracking-widest text-muted">Phone</div>
+              <div class="text-ink group-hover:text-brand transition">+91 99999 99999</div>
+            </div>
+          </a>
+          <div class="contact-item cursor-default">
+            <span class="contact-ico"><i class="fa-solid fa-location-dot"></i></span>
+            <div>
+              <div class="text-xs uppercase tracking-widest text-muted">Location</div>
+              <div class="text-ink">Greater Allahabad Area, Uttar Pradesh, India</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 flex items-center gap-4">
+          <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="mailto:shashidhar.pathak@example.com" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form id="contactForm" class="lg:col-span-7 rounded-3xl border border-line bg-elevated/60 backdrop-blur p-8 lg:p-10 space-y-6" data-aos="fade-left" novalidate>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div>
+            <label class="lbl">Full Name</label>
+            <input name="name" required data-testid="contact-name-input" class="inp" placeholder="Your full name"/>
+          </div>
+          <div>
+            <label class="lbl">Email</label>
+            <input type="email" name="email" required data-testid="contact-email-input" class="inp" placeholder="you@company.com"/>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div>
+            <label class="lbl">Phone (optional)</label>
+            <input name="phone" data-testid="contact-phone-input" class="inp" placeholder="+91"/>
+          </div>
+          <div>
+            <label class="lbl">Subject</label>
+            <input name="subject" required data-testid="contact-subject-input" class="inp" placeholder="Project enquiry"/>
+          </div>
+        </div>
+        <div>
+          <label class="lbl">Message</label>
+          <textarea name="message" rows="6" required data-testid="contact-message-input" class="inp resize-none" placeholder="Tell me about your project, timeline, and location…"></textarea>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+          <p id="formStatus" class="text-sm text-muted" data-testid="contact-status"></p>
+          <button type="submit" data-testid="contact-submit-btn"
+                  class="group inline-flex items-center gap-3 rounded-full bg-brand text-base px-8 py-3.5 font-semibold hover:bg-accent transition-all shadow-lg shadow-brand/20 disabled:opacity-60">
+            <span id="submitText">Send Message</span>
+            <i id="submitIcon" class="fa-solid fa-paper-plane group-hover:translate-x-1 transition-transform"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-line py-10">
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-sm text-muted">© <span id="year"></span> Shashidhar Pathak — Lead QA/QC · Civil Engineer</div>
+      <div class="text-xs text-muted">Crafted with precision — <span class="text-brand">HTML · Tailwind · AOS</span></div>
+    </div>
+  </footer>
+
+  <!-- AOS + main -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
